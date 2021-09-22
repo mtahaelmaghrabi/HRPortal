@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeService", "EmployeeService\EmployeeService.csproj", "{A5E483E8-789D-468C-A409-9F21957169AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{C86EBFE0-7B08-462A-BB6E-94794539BA3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{76AE7B3B-FC2F-4507-8171-6245F248A6CA}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy\Kuberenetes\employee-deploy.yaml = Deploy\Kuberenetes\employee-deploy.yaml
+		Deploy\Kuberenetes\employee-loadbalancer.yaml = Deploy\Kuberenetes\employee-loadbalancer.yaml
+		Deploy\Kuberenetes\employee-nodeport.yaml = Deploy\Kuberenetes\employee-nodeport.yaml
+		Deploy\Kuberenetes\ingress-srv.yaml = Deploy\Kuberenetes\ingress-srv.yaml
+		Deploy\Kuberenetes\leave-request-deploy.yaml = Deploy\Kuberenetes\leave-request-deploy.yaml
+		Deploy\Kuberenetes\local-pvc.yaml = Deploy\Kuberenetes\local-pvc.yaml
+		Deploy\Kuberenetes\mssql-plat-depl.yaml = Deploy\Kuberenetes\mssql-plat-depl.yaml
+		Deploy\Kuberenetes\rabbitmq-depl.yaml = Deploy\Kuberenetes\rabbitmq-depl.yaml
+		Deploy\Kuberenetes\README.MD = Deploy\Kuberenetes\README.MD
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeaveRequestService", "LeaveRequestService\LeaveRequestService.csproj", "{AAC0992B-8F7F-4D08-81B4-ABCEB8169F89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowService", "WorkflowService\WorkflowService.csproj", "{8C524DF1-32C9-4402-961A-0F83B5FC14C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5E483E8-789D-468C-A409-9F21957169AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E483E8-789D-468C-A409-9F21957169AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E483E8-789D-468C-A409-9F21957169AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E483E8-789D-468C-A409-9F21957169AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC0992B-8F7F-4D08-81B4-ABCEB8169F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC0992B-8F7F-4D08-81B4-ABCEB8169F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC0992B-8F7F-4D08-81B4-ABCEB8169F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC0992B-8F7F-4D08-81B4-ABCEB8169F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C524DF1-32C9-4402-961A-0F83B5FC14C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C524DF1-32C9-4402-961A-0F83B5FC14C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C524DF1-32C9-4402-961A-0F83B5FC14C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C524DF1-32C9-4402-961A-0F83B5FC14C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76AE7B3B-FC2F-4507-8171-6245F248A6CA} = {C86EBFE0-7B08-462A-BB6E-94794539BA3A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F95E633-475F-4DFC-85E1-A90325ED9A02}
+	EndGlobalSection
+EndGlobal

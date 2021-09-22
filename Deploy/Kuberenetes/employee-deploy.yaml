@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employee-deployment
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: employeeservice
+  template:
+    metadata:
+      name: employee-deployment
+      labels:
+        app: employeeservice
+    spec:
+      containers:
+        - name: employeeservice
+          image: mtahaelmaghrabi/employeeservice:latest
+          resources:
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: employee-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: employeeservice
+  ports:
+  - name: employeeservice
+    protocol: TCP
+    port: 80
+    targetPort: 80
