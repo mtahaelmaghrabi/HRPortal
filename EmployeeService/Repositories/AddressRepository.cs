@@ -18,6 +18,10 @@ namespace EmployeeService.Repositories
             return (_context.SaveChanges() >= 0);
         }
 
+        public EmployeeAddress GetCurrentAddress(Guid employeeID)
+        {
+            throw new NotImplementedException();
+        }
 
         public EmployeeAddress CreateAddress(Guid employeeID, EmployeeAddress employeeAddress)
         {

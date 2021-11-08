@@ -13,8 +13,5 @@ namespace WorkflowService.Models
         public string WorkflowID { get; set; }
 
         public string RequestTypeID { get; set; }
-        public string WorkflowID { get; set; }
-
-
     }
 }
